@@ -50,7 +50,7 @@ window.loginUser = () => {
             console.log("NOT FOUND");
             }
             })
-            .catch((error) => {
+            .catch((err) => {
                 alert(err.meassage);
     })
 }

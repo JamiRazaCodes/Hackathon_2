@@ -37,13 +37,9 @@ let loginLink = document.getElementById("loginLink");
 let uploadLink = document.getElementById("uploadLink");
 let signupLink = document.getElementById("signupLink");
 let logoutBtn = document.getElementById("logoutBtn");
+let cart = document.getElementById("cart")
+let checkOut=document.getElementById("checkOut")
 let productParent = document.getElementById("productParent")
-
-// let productName = document.getElementById("productName")
-// let productPrice = document.getElementById("productPrice")
-// let productDesc = document.getElementById("productDesc")
-// let productImg = document.getElementById("productImg")
-
 
 let products = [];
 
@@ -56,26 +52,35 @@ function init() {
     signupLink.style.display = "none";
     if (userObj.userType === "admin") {
       uploadLink.style.display = "inline-block";
+      cart.style.display="none"
+      checkOut.style.display="none"
     }
     logoutBtn.className =
       "text-white mx-4 inline-block bg-blue-500 p-2 rounded";
+  }if(!userObj){
+      cart.style.display="none"
+      checkOut.style.display="none"
   }
 }
+
+
 init();
+
 let renderProducts = () => {
+  console.log("Rendering products...");
     productParent.innerHTML = "";
     products.forEach((x) => {
-        productParent.innerHTML += `
-            <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="${x.productImage}" alt="Product Image" class="w-full h-56 object-cover" />
+        productParent.innerHTML += `<div class="bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="${x.imageUrl}" alt="${x.name}" class="w-full h-56 object-cover">
                 <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">${x.productName}</h3>
-                    <p class="text-gray-600 mb-4">R$ ${x.productPrice}</p>
-                    <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy Now</a>
+                    <h3 class="text-xl font-semibold mb-2">${x.name}</h3>
+                    <p class="text-gray-600 mb-4">Rs ${x.price}</p>
+                    <a href="/pages/productPage/productPage.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buy Now</a>
                 </div>
             </div>
         `;
     });
+    
 };
 
 
@@ -93,22 +98,26 @@ window.logOut = () => {
       window.location.assign('index.html')
   };
 
-  let getProduct = async () => {
-    const refrence = collection(db, "products");
-    const dt = await getDocs (refrence);
-    console.log(dt)
-    dt.forEach((dc) => {
-         
-        let obj = {
-            id: dc.id,
-            ...dc.data(),
-        }
-        products.push(obj)
-        console.log(products)
-        renderProducts();
-    })
+const getProduct = async () => {
+  try {
+    const reference = collection(db, "products");
+    const dt = await getDocs(reference);
+    
+    dt.forEach((doc) => {
+      let obj = {
+        id: doc.id,
+        ...doc.data(),
+      };
+      products.push(obj);
+    });
+
+    console.log(products);
+    renderProducts();
+    console.log("rendering complete")
+  } catch (error) {
+    console.error("Error fetching products:", error);
   }
-
-
-  getProduct()
   
+};
+
+getProduct();

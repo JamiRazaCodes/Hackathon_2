@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-semibold text-gray-700">
+                    <a href="#" class="text-gray-800">Jami Raza</a>
+                </div>
+                <div>
+                    <a href="../../index.html" class="text-gray-600 hover:text-gray-800 mx-4">Home</a>
+                    <a href="../addToCart/cart.html" class="text-gray-600 hover:text-gray-800 mx-4">Cart</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="container mx-auto px-6 py-10" id="parentProduct">
+        <!-- <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2">
+                <img class="rounded-lg shadow-lg" src="https://via.placeholder.com/500" alt="Product Image">
+            </div>
+            <div class="md:w-1/2 md:ml-10 mt-6 md:mt-0">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Product Name</h2>
+                <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <p class="text-2xl font-semibold text-gray-800 mb-4">$99.99</p>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Add to Cart</button>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="container mx-auto px-6 py-10" >
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Customer Reviews</h3>
+        <div class="space-y-6">
+            <!-- Review Item -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <div class="mr-4">
+                        <img class="w-12 h-12 rounded-full" src="https://via.placeholder.com/50" alt="User Avatar">
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold">John Doe</h4>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">This product is amazing! It exceeded my expectations in every way.</p>
+            </div>
+        </div>
+
+        <!-- Write Review Form -->
+        <div class="mt-10">
+            <h4 class="text-xl font-bold text-gray-800 mb-6">Write a Review</h4>
+            <form class="bg-white p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Name</label>
+                    <input type="text" id="name" class="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <label for="rating" class="block text-gray-700">Rating</label>
+                    <div class="flex items-center mt-2">
+                        <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                        <label for="star1" class="cursor-pointer text-yellow-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </label>
+                        <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                        <label for="star2" class="cursor-pointer text-yellow-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </label>
+                        <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                        <label for="star3" class="cursor-pointer text-yellow-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </label>
+                        <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                        <label for="star4" class="cursor-pointer text-yellow-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </label>
+                        <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                        <label for="star5" class="cursor-pointer text-yellow-500">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927C9.282 2.59 9.718 2.59 9.951 2.927l1.286 2.205a1 1 0 00.758.416l2.528.248c.341.034.482.445.228.67l-1.927 1.618a1 1 0 00-.305.986l.596 2.482c.087.363-.311.651-.63.47L10 12.347l-2.417 1.464c-.319.181-.717-.107-.63-.47l.596-2.482a1 1 0 00-.305-.986L4.317 6.466c-.254-.225-.113-.636.228-.67l2.528-.248a1 1 0 00.758-.416L9.049 2.927z"/>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="review" class="block text-gray-700">Review</label>
+                    <textarea id="review" rows="4" class="w-full mt-2 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Write your review"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <div>&copy; 2024 BrandName. All rights reserved.</div>
+                <div>
+                    <a href="#" class="text-gray-400 hover:text-gray-200 mx-2">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-200 mx-2">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="productPage.js"></script>
+</body>
+</html>

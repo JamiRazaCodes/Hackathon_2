@@ -6,6 +6,11 @@
     <title>Web Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
 <body class="bg-gray-100">
 
     <!-- Navbar -->
@@ -20,6 +25,8 @@
                     <a id="uploadLink" href="./pages/product_upload/productUplaod.html" class="text-gray-600 hidden hover:text-gray-800 mx-4">Upload Product</a>
                     <a id="loginLink" href="./pages/auth/login/login.html" class="text-gray-600 hover:text-gray-800 mx-4">Login</a>
                     <a id="signupLink" href="./pages/auth/signup/signup.html" class="text-gray-600 hover:text-gray-800 mx-4">Signup</a>
+                    <a href="./pages/addToCart/cart.html" class="text-gray-600 hover:text-gray-800 mx-4" id="cart">Cart</a>
+                    <a href="pages/checkOut/checkout.html" class="text-gray-600 hover:text-gray-800 mx-4" id="checkOut">Check Out</a>
                     <button onclick="logOut()" id="logoutBtn" href="pages/signup/signup.html" class="text-white mx-4 hidden bg-blue-500 p-2 rounded">Logout</button>
                 </div>
             </div>
@@ -27,18 +34,18 @@
     </nav>
     
     <!-- Hero Section -->
-    <header class="bg-cover bg-center h-screen" style="background-image: url('https://via.placeholder.com/1500');">
+    <header class="bg-cover bg-center h-screen" style="background-image: url('https://queue-it.com/media/ppcp1twv/product-drop.jpg');">
         <div class="flex items-center justify-center h-full bg-gray-900 bg-opacity-50">
             <div class="text-center text-white">
                 <h1 class="text-5xl font-bold mb-4">Welcome to Our Store</h1>
                 <p class="text-lg mb-8">Find the best products at unbeatable prices.</p>
-                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Shop Now</a>
+                <a href="#product" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Shop Now</a>
             </div>
         </div>
     </header>
 
     <!-- Featured Products Section -->
-    <section class="container mx-auto px-6 py-10">
+    <section id="product" class="container mx-auto px-6 py-10">
         <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productParent">
             <!-- Product Card -->
